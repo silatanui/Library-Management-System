@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>CODE GENERATOR</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-height: 100vh;
+        font-family: outfit;
+    }
+
+    .box {
+        box-shadow: -3px -3px 5px gray, 3px 3px 8px black;
+    }
+</style>
+
+<body class="bg-dark">
+    <div class="box col-lg-4 col-md-6 col-sm-10 col-12 mx-auto p-3 text-white">
+        <h3>Library Management System</h3>
+
+        <div id="insertForm">
+            <h2>Add a Book to the Library</h2>
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" required><br><br>
+            <label for="author">Author:</label>
+            <input type="text" class="form-control" id="author" required><br><br>
+            <label for="isbn">ISBN:</label>
+            <input type="text" class="form-control" id="isbn" required><br><br>
+            <button onclick="addBook()" class="btn btn-success">Add Book</button>
+        </div>
+
+        <div id="borrowForm">
+            <h2>Borrow a Book</h2>
+            <label for="borrowIsbn">Enter ISBN of the book to borrow:</label>
+            <input type="text" class="form-control" id="borrowIsbn" required><br><br>
+            <button onclick="borrowBook()" class="btn btn-success">Borrow Book</button>
+        </div>
+
+        <div id="booksList">
+            <h2>Books in the Library</h2>
+            <ul id="books"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
